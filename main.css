@@ -1,0 +1,307 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#e5e7eb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================
+   NAVIGATION BAR
+=========================== */
+
+.navbar-wrap{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    padding:12px 18px;
+}
+
+.navbar .mark{
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#374151,#6b7280 45%,#9ca3af 100%);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:8px;
+    margin:0;
+    padding:0;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    padding:10px 16px;
+    border-radius:12px;
+    transition:all .3s ease;
+}
+
+/* Hover only */
+
+.navbar ul li a:hover{
+    background:#f3f4f6;
+    color:#4b5563;
+}
+
+/* Remove active bubble */
+
+.navbar ul li a.active{
+    background:none;
+    color:#333;
+}
+
+/* Mobile */
+
+.nav-toggle{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    background:none;
+    border:none;
+}
+
+.nav-toggle span{
+    width:24px;
+    height:3px;
+    background:#333;
+    border-radius:2px;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        width:100%;
+        justify-content:space-between;
+        position:relative;
+    }
+
+    .navbar ul{
+        position:absolute;
+        top:60px;
+        left:0;
+        right:0;
+        background:white;
+        flex-direction:column;
+        border-radius:16px;
+        box-shadow:0 10px 30px rgba(0,0,0,.15);
+        padding:12px;
+        display:none;
+    }
+
+    .navbar ul.active{
+        display:flex;
+    }
+
+    .nav-toggle{
+        display:flex;
+    }
+
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.background-color-layer{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#374151,#6b7280 45%,#9ca3af 100%);
+    z-index:-2;
+}
+
+.content-wrapper{
+    width:100%;
+}
+
+header{
+    height:55vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding-top:60px;
+}
+
+header h1{
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:1.4rem;
+    font-weight:300;
+    letter-spacing:2px;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:#a9adb2;
+    margin:35px 0;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    scroll-margin-top:20px;
+    border:1px solid #8b8f95;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.card-block{
+    padding:40px;
+}
+
+.card h2{
+    font-size:2rem;
+    margin-bottom:30px;
+    color:#4b5563;
+}
+
+/* ===========================
+   FLEX ROWS
+=========================== */
+
+.row{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.col-md-4{
+    flex:1;
+    min-width:250px;
+}
+
+.col-md-8{
+    flex:2;
+    min-width:300px;
+}
+
+.col-xs-12{
+    width:100%;
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+.img-responsive{
+    width:100%;
+    max-width:230px;
+    display:block;
+    margin:auto;
+}
+
+.col-md-4 img{
+    border-radius:15px;
+}
+
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.col-md-8 p{
+    margin-bottom:15px;
+    text-align:justify;
+}
+
+/* Bigger, neater about-me image */
+.card:nth-of-type(1) .img-responsive{
+    max-width:320px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.card:nth-of-type(2) .col-md-4{
+    text-align:center;
+}
+
+.card:nth-of-type(2) img{
+    width:120px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.card:nth-of-type(2) img:hover{
+    transform:scale(1.1);
+}
+
+.h5{
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+
+.text-center{
+    text-align:center;
+}
+
+.text-center p{
+    text-align:center;
+}
