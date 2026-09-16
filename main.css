@@ -115,10 +115,18 @@ body{
 
 @media(max-width:768px){
 
+    .navbar-wrap{
+        top:12px;
+        padding:0 12px;
+        box-sizing:border-box;
+    }
+
     .navbar{
         width:100%;
-        justify-content:space-between;
+        box-sizing:border-box;
         position:relative;
+        justify-content:space-between;
+        padding:12px 16px;
     }
 
     .navbar ul{
@@ -126,20 +134,40 @@ body{
         top:60px;
         left:0;
         right:0;
+        width:100%;
+        box-sizing:border-box;
         background:white;
         flex-direction:column;
         border-radius:16px;
         box-shadow:0 10px 30px rgba(0,0,0,.15);
         padding:12px;
         display:none;
+        gap:4px;
     }
 
     .navbar ul.active{
         display:flex;
     }
 
+    .navbar ul li{
+        width:100%;
+    }
+
+    .navbar ul li a{
+        display:block;
+        width:100%;
+        box-sizing:border-box;
+        text-align:center;
+    }
+
     .nav-toggle{
         display:flex;
+        flex-direction:column;
+        gap:5px;
+        cursor:pointer;
+        background:none;
+        border:none;
+        padding:5px;
     }
 
 }
@@ -304,109 +332,4 @@ header p{
 
 .text-center p{
     text-align:center;
-}
-
-/* ===========================
-   RESPONSIVE MOBILE LAYOUT
-   Keeps the original desktop design unchanged.
-=========================== */
-
-@media (max-width: 768px){
-    .navbar-wrap{
-        top:15px;
-        padding:0 12px;
-    }
-
-    .navbar{
-        padding:10px 14px;
-        border-radius:18px;
-    }
-
-    .navbar ul{
-        top:56px;
-        left:0;
-        right:0;
-    }
-
-    header{
-        height:48vh;
-        min-height:300px;
-        padding:70px 20px 20px;
-    }
-
-    header h1{
-        font-size:2.7rem;
-        line-height:1.2;
-    }
-
-    header p{
-        font-size:1.15rem;
-    }
-
-    .container{
-        width:calc(100% - 24px);
-        max-width:none;
-    }
-
-    .card{
-        margin:20px 0;
-        border-radius:18px;
-    }
-
-    .card-block{
-        padding:24px 18px;
-    }
-
-    .card h2{
-        font-size:1.7rem;
-        margin-bottom:22px;
-    }
-
-    .row{
-        flex-direction:column;
-        gap:22px;
-    }
-
-    .col-md-4,
-    .col-md-8{
-        width:100%;
-        min-width:0;
-        flex:none;
-    }
-
-    .card:nth-of-type(1) .img-responsive{
-        max-width:280px;
-    }
-
-    .col-md-8 p{
-        text-align:left;
-        overflow-wrap:anywhere;
-    }
-
-    .card:nth-of-type(2) .row{
-        align-items:center;
-    }
-
-    .card:nth-of-type(2) img{
-        width:110px;
-        max-width:110px;
-    }
-
-    .h5{
-        font-size:1.1rem;
-    }
-
-    .footer-container{
-        padding:20px 12px;
-    }
-}
-
-@media (max-width: 380px){
-    header h1{
-        font-size:2.35rem;
-    }
-
-    .card-block{
-        padding:20px 15px;
-    }
 }
